@@ -6,7 +6,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
-    String[] mobileArray = {"hello","world","harvey"};
+    String[] donateList = {"hello","world","harvey"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        ArrayAdapter adapter = new ArrayAdapter<>(this, R.layout.activity_listview, mobileArray);
+        ArrayAdapter adapter = new ArrayAdapter<>(this, R.layout.activity_listview, donateList);
 
         ListView listView = (ListView) findViewById(R.id.mobile_list);
         listView.setAdapter(adapter);
