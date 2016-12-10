@@ -9,14 +9,14 @@ import java.util.HashMap;
 
 public class MainDatabase {
 	Date currentDate = new Date();
-	HashMap database = new HashMap();
+	static HashMap<String, AddItem> database = new HashMap();
 
 	public void addItem(String refNumber, String object, boolean status, int points){
 		database.put(refNumber, new AddItem(refNumber, object, status, points, currentDate));
 		
 	}
 	
-	public AddItem checkRef(String refNumber){
+	public static AddItem checkRef(String refNumber){
 		return database.get(refNumber);
 	}
 }
