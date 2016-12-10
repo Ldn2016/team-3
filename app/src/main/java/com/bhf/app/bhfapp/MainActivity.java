@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         internalDatabase = new InternalDataBase();
         addReference = new AddReference;
-        addreference.setMainDatabase(internalDatabase.d);
+        addreference.setMainDatabase(internalDatabase);
 
 
         ArrayAdapter adapter = new ArrayAdapter<>(this, R.layout.activity_listview, donateList);

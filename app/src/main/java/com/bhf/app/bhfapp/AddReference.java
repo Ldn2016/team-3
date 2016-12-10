@@ -2,7 +2,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class AddReference {
-    MainDatabase dataBase;
+    InternalDatabase internalDatabase;
     Input input = new Input();
     
     
@@ -13,12 +13,12 @@ public class AddReference {
         }while(referenceCode.length() != 10);
         
         referenceCode = referenceCode.toUpperCase();
-        
+        internalDatabase.addToList(referenceCode);
         
         
     }
     
-    public void setMainDatabase(MainDatabase mainDatabase){
-        this.database = mainDatabase;
+    public void setMainDatabase(InternalDatabase internalDatabase){
+        this.database = internalDatabase;
     }
 }
