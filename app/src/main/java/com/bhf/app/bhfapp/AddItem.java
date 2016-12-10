@@ -1,6 +1,8 @@
+package com.bhf.app.bhfapp;
+
 import java.util.*;
 
-public class AddItem{
+public class AddItem {
 	
 	String refNumber;
 	String object;
@@ -20,7 +22,7 @@ public class AddItem{
 		return refNumber;
 	}
 	public String getObject(){
-		return getObject;
+		return object;
 	}
 	public boolean getStatus(){
 		return status;
@@ -28,7 +30,7 @@ public class AddItem{
 	public int getPoints(){
 		return points;
 	}
-	public Date getCurentDate(){
+	public Date getCurrentDate(){
 		return currentDate;
 	}
 	
