@@ -3,7 +3,7 @@ public class MainDatabase{
 	Date currentDate = new Date();
 	
 	public void addItem(String refNumber, String object, boolean status, int points, Date currentDate){
-		list.add(AddItem(refNumber, object, status, points, currentDate))
+		list.add(AddItem(refNumber, object, status, points, currentDate));
 	}
 	
 }
