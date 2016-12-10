@@ -30,7 +30,7 @@ public class ObjectDetails extends AppCompatActivity {
 
         TextView status = new TextView(this);
         ref.setTextSize(35);
-        ref.setText(item.getStatus());
+        ref.setText(item.getStatus()); //
 
         TextView points = new TextView(this);
         ref.setTextSize(35);
@@ -38,7 +38,7 @@ public class ObjectDetails extends AppCompatActivity {
 
         TextView date = new TextView(this);
         ref.setTextSize(35);
-        ref.setText(item.getDate());
+        ref.setText((CharSequence) item.getCurrentDate());
     }
 
 }
