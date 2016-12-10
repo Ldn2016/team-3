@@ -1,5 +1,8 @@
 package com.bhf.app.bhfapp;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.*;
 
 public class AddItem {
@@ -33,5 +36,4 @@ public class AddItem {
 	public Date getCurrentDate(){
 		return currentDate;
 	}
-	
 }
