@@ -19,7 +19,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:background="@android:color/holo_red_dark"
-        android:onClick="openReferencePage"/>
+        android:onClick="openReferencePage"
+        android:textSize="32dp"/>
     <ListView
         android:id="@+id/item_list"
         android:layout_width="match_parent"
