@@ -18,7 +18,8 @@ public class ObjectDetails extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        AddItem item = (AddItem) intent.getParcelableExtra("");
+        String refKey = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        AddItem item = new AddItem(); //
 
         TextView ref = new TextView(this);
         ref.setTextSize(40);
@@ -30,7 +31,13 @@ public class ObjectDetails extends AppCompatActivity {
 
         TextView status = new TextView(this);
         ref.setTextSize(35);
-        ref.setText(item.getStatus()); //
+
+        if (item.getStatus()) {
+            ref.setText("Sold");
+        }
+        else {
+            ref.setText("Pending");
+        }
 
         TextView points = new TextView(this);
         ref.setTextSize(35);
