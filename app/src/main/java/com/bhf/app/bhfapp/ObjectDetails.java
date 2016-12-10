@@ -19,7 +19,7 @@ public class ObjectDetails extends AppCompatActivity {
         Intent intent = getIntent();
 
         String refKey = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-        AddItem item = new AddItem(); //
+        AddItem item = MainDatabase.getItemByKey(refKey); //
 
         TextView ref = new TextView(this);
         ref.setTextSize(40);
