@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayAdapter adapter = new ArrayAdapter<>(this, R.layout.activity_listview, donateList);
 
-        //ListView listView = (ListView) findViewById(R.id.donateList);
+        ListView listView = (ListView) findViewById(R.id.item_list);
         //listView.setAdapter(adapter);
     }
 
