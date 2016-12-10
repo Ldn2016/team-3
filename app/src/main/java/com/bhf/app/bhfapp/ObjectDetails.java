@@ -18,7 +18,8 @@ public class ObjectDetails extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        AddItem item = (AddItem) intent.getParcelableExtra("");
+        String refKey = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        AddItem item = new AddItem(); //
 
         TextView ref = new TextView(this);
         ref.setTextSize(40);
