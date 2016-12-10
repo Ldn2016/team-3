@@ -1,7 +1,8 @@
 public class InternalDatabase{
 	MainDatabase d = new MainDatabase();
 	ArrayList<AddItem> database = new ArrayList<AddItem>();
-	public InternalDatabase(){
+	public static void main(String[] args){
+	    addToList("ABCDEFGHIJ");
 	}
 	
 	public void addToList(String refNumber){
