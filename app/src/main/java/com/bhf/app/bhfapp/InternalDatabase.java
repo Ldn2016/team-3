@@ -21,4 +21,23 @@ public class InternalDatabase{
 		}
 	}
 	
+	public String[][] getInternalDatabase{
+	    String [][] databaseAsStr;
+	    String[] temp;
+	    int n;
+	    DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+
+	    
+	    for(int i = 0; i < database.length(); i++){
+	        
+	        n = 0;
+	        databaseAsStr[i][n++] = database.get(i).getRefNumber();
+	        databaseAsStr[i][n++] = database.get(i).getObject();
+	        databaseAsStr[i][n++] = Integer.toString(database.get(i).getPoints());
+	        databaseAsStr[i][n++] = df.format(database.get(i).getCurrentDate());
+	        
+	    }
+	    return databaseAsStr;
+	}
+	
 }
