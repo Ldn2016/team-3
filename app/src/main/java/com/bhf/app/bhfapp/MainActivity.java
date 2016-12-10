@@ -19,5 +19,4 @@ public class MainActivity extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.mobile_list);
         listView.setAdapter(adapter);
     }
-
 }
