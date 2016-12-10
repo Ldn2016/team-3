@@ -1,11 +1,13 @@
 import java.util.*;
 
 public class InternalDatabase{
-	MainDatabase d = new MainDatabase();
+	static MainDatabase d = new MainDatabase();
 	ArrayList<AddItem> database = new ArrayList<AddItem>();
-
 	static InternalDatabase internal = new InternalDatabase();
+	
 	/*public static void main(String[] args){
+		internal.addToList("ABCDEFGHIJ");
+		d.addItem("ABCDEFGHIJ", "Bed", false, 10);
 		internal.addToList("ABCDEFGHIJ");
 	}*/
 

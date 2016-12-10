@@ -10,7 +10,7 @@ public class MainDatabase {
 	Date currentDate = new Date();
 	HashMap<String, AddItem> database = new HashMap();
 
-	public void addItem(String refNumber, String object, boolean status, int points, Date currentDate){
+	public void addItem(String refNumber, String object, boolean status, int points){
 		database.put(refNumber, new AddItem(refNumber, object, status, points, currentDate));
 		
 	}
