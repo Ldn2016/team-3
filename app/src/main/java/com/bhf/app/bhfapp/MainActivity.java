@@ -11,11 +11,17 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     String[] donateList = {"hello","world","harvey"};
+    InternalDatabase internalDatabase;
+    AddReference addReference;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        internalDatabase = new InternalDataBase();
+        addReference = new AddReference;
+        addreference.setMainDatabase(internalDatabase.d);
 
 
         ArrayAdapter adapter = new ArrayAdapter<>(this, R.layout.activity_listview, donateList);
