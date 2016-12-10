@@ -29,11 +29,11 @@ public class Reference extends AppCompatActivity {
         System.out.println("Opened page!");
     }
     public void submitRef(View view){
-        Intent intent = new Intent(this, HARVEYDOESNTKNOW.class);
+        Intent intent = new Intent(this, MainActivity.class);
         EditText editText = (EditText) findViewById(R.id.RefNum);
         String message = editText.getText().toString();
-        if(message.length()==10){
-            intent.putExtra(EXTRA_MESSAGE, message);
+        if(message.length()==10 && MainDatabase.checkRef(message) != null){
+            InternalDatabase.addToList(message);
             startActivity(intent);
         }
         else{

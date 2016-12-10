@@ -30,14 +30,12 @@ public class ObjectDetails extends AppCompatActivity {
 //
         InternalDatabase internalDatabase = new InternalDatabase();
         ArrayList<AddItem> data = internalDatabase.getDatabase();
-//        AddItem item = null;
-//        for(AddItem datum:data){
-//            if(datum.getRefNumber().equals(refKey)){
-//                item = datum;
-//            }
-//        }
-
-        AddItem item = data.get(0);
+        AddItem item = null;
+        for(AddItem datum:data){
+            if(datum.getRefNumber().equals(refKey)){
+                item = datum;
+            }
+        }
 
 
         ArrayList<String> attributeList = new ArrayList<>();

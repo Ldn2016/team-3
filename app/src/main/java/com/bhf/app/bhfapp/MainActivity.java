@@ -22,14 +22,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        MainDatabase.addItem();
         internalDatabase = new InternalDatabase();
 //        addReference = new AddReference;
 //        addreference.setMainDatabase(internalDatabase.d);
 
-        ArrayList<AddItem> data = internalDatabase.getDatabase();
+        final ArrayList<AddItem> data = internalDatabase.getDatabase();
         String[] donateList = new String[data.size()];
         for(int i = 0; i < data.size(); i++){
-            donateList[i] = data.get(i).getObject();
+            donateList[i] = data.get(i).getObject() +"\n+"+ data.get(i).getPoints() +" Points";
         }
 
         ArrayAdapter adapter = new ArrayAdapter<>(this, R.layout.activity_listview, donateList);
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                String message = id+"";
+                String message = data.get((int) id).getRefNumber();
                 Toast.makeText(getBaseContext(),message,Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this, ObjectDetails.class);
 
