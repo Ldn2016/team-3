@@ -30,7 +30,7 @@ public class AddItem {
 	public int getPoints(){
 		return points;
 	}
-	public Date getCurentDate(){
+	public Date getCurrentDate(){
 		return currentDate;
 	}
 	
