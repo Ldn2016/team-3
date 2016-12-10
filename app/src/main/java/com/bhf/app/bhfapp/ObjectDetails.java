@@ -30,7 +30,13 @@ public class ObjectDetails extends AppCompatActivity {
 
         TextView status = new TextView(this);
         ref.setTextSize(35);
-        ref.setText(item.getStatus()); //
+
+        if (item.getStatus()) {
+            ref.setText("Sold");
+        }
+        else {
+            ref.setText("Pending");
+        }
 
         TextView points = new TextView(this);
         ref.setTextSize(35);
