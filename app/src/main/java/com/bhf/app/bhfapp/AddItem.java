@@ -5,7 +5,7 @@ import android.os.Parcelable;
 
 import java.util.*;
 
-public class AddItem{
+public class AddItem {
 	
 	String refNumber;
 	String object;
