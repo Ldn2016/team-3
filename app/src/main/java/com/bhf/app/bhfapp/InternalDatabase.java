@@ -1,10 +1,14 @@
 package com.bhf.app.bhfapp;
 
+import android.widget.TextView;
+
 import java.lang.reflect.Array;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class InternalDatabase{
-//	static MainDatabase d = new MainDatabase();
+	static MainDatabase d = new MainDatabase();
 	ArrayList<AddItem> database = new ArrayList<AddItem>();
 	static InternalDatabase internal = new InternalDatabase();
 	
@@ -18,26 +22,26 @@ public class InternalDatabase{
 
 	}
 	
-//	public void addToList(String refNumber){
-//		if(d.checkRef(refNumber)==null){
-//			System.out.println("Invalid reference code");
-//		}
-//		else{
-//			database.add(d.checkRef(refNumber));
-//		}
-//	}
+	public void addToList(String refNumber){
+		if(d.checkRef(refNumber)==null){
+			System.out.println("invalid");
+		}
+		else{
+			database.add(d.checkRef(refNumber));
+		}
+	}
 	public ArrayList<AddItem> getDatabase(){
 		return database;
 	}
 	
-	public String[][] getInternalDatabase{
-	    String [][] databaseAsStr;
+	public String[][] getInternalDatabase(){
+	    String[][] databaseAsStr = new String[database.size()][];
 	    String[] temp;
 	    int n;
 	    DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
 
 	    
-	    for(int i = 0; i < database.length(); i++){
+	    for(int i = 0; i < database.size(); i++){
 	        
 	        n = 0;
 	        databaseAsStr[i][n++] = database.get(i).getRefNumber();
