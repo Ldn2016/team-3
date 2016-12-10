@@ -10,21 +10,21 @@ import java.util.*;
 public class InternalDatabase{
 	static ArrayList<AddItem> database = new ArrayList<AddItem>();
 	static InternalDatabase internal = new InternalDatabase();
-	
-	/*public static void main(String[] args){
-		internal.addToList("ABCDEFGHIJ");
+	public static int donorScore = 0;
 
-		internal.addToList("ABCDEFGHIJ");
-	}*/
+
+
+
 
 	public static void addToList(String refNumber){
-		if(MainDatabase.checkRef(refNumber)==null){
-			//go back to invalid
-		}
-		else{
-			database.add(MainDatabase.checkRef(refNumber));
-		}
+		database.add(MainDatabase.checkRef(refNumber));
+		donorScore +=MainDatabase.checkRef(refNumber).getPoints();
+		System.out.println(""+MainDatabase.checkRef(refNumber).getPoints());
 	}
+	public int getScore(){
+		return donorScore;
+	}
+
 	public ArrayList<AddItem> getDatabase(){
 		return database;
 	}

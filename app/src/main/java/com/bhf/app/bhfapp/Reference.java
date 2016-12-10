@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Reference extends AppCompatActivity {
+
     public final static String EXTRA_MESSAGE = "com.bhf.app.bhfapp.MESSAGE";
     private EditText refNum;
     public void buttonOnClick(View v){
@@ -33,6 +34,7 @@ public class Reference extends AppCompatActivity {
         EditText editText = (EditText) findViewById(R.id.RefNum);
         String message = editText.getText().toString();
         if(message.length()==10 && MainDatabase.checkRef(message) != null){
+
             InternalDatabase.addToList(message);
             startActivity(intent);
         }

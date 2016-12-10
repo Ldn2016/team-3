@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -52,9 +53,25 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    protected void onResume()
+    {
+        super.onResume();
+        incrementScore();
+    }
+
     protected void openReferencePage(View view){
         Intent intent = new Intent(MainActivity.this, Reference.class);
         startActivity(intent);
+    }
+
+    protected void openRewardPage(View view){
+        Intent intent = new Intent(MainActivity.this, Rewards.class);
+        startActivity(intent);
+    }
+
+    public void incrementScore(){
+        TextView textViewToChange = (TextView) findViewById(R.id.textView2);
+        textViewToChange.setText("Score: " + Integer.toString(internalDatabase.getScore()));
     }
 
 }
